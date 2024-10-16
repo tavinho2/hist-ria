@@ -8,4 +8,13 @@ async function vizualizarInformacoesGlobais(){
     const horas = parseInt(dados.tempo_medio)
     const minutos = Math.round((dados.tempo_medio - horas)*100)
     const porcentagemConectada = ((pessoasConectadas / pessoasNoMundo)*100).toFixed
+
+ const paragrafo = document.createElement('p')
+paragrafo.classList.add('graficos-container_texto')
+paragrafo.innerHTML = 'Voce sabia que o mundo tem <span>${pessoasNoMundo}'
+
+const container = document.getElementById('graficos-container')
+container.appendChild(paragrafo)
 }
+
+vizualizarInformacoesGlobais()
